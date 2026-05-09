@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+@theme {
+  /* ── Primary palette ── */
+  --color-navy:        #0F172A;   /* primary navy — deep, rich */
+  --color-navy-mid:    #1E293B;   /* secondary navy — cards, sections */
+  --color-gold:        #C9A227;   /* luxury gold */
+  --color-gold-hover:  #D4AF37;   /* gold hover — slightly brighter */
+  --color-gold-muted:  #E8D5A3;   /* gold tint for backgrounds */
+
+  /* ── Surface colors ── */
+  --color-white:       #FFFFFF;
+  --color-warm-white:  #FAFAF9;   /* near-white with warmth */
+  --color-cream:       #F5F2EB;   /* light cream — used sparingly */
+
+  /* ── Text colors ── */
+  --color-text-dark:   #111827;   /* headings */
+  --color-text-body:   #374151;   /* body paragraphs */
+  --color-text-muted:  #6B7280;   /* secondary text */
+
+  /* ── Border ── */
+  --color-border:      #E5E7EB;
+  --color-border-dark: #D1D5DB;
+
+  /* ── Typography ── */
+  --font-heading: 'Playfair Display', serif;
+  --font-body:    'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: var(--color-text-body);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-text-dark);
+    line-height: 1.2;
+  }
+
+  p {
+    color: var(--color-text-body);
+  }
+}
